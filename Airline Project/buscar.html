@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <script type="text/javascript" src="JS/javascript.js"></script>
+  <title>Earthland Airways</title>
+    <!-- /////Bootstrap CSS///// -->
+  <link href="CSS/Plantilla/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- /////Fuentes///// -->
+  <link href="CSS/Plantilla/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- /////Estilo de la Plantilla///// -->
+  <link href="CSS/Plantilla/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-5 mb-5">
+      <div class="card-header text-center"><h4>Busca tu Vuelo!</h4></div>
+      <div class="card-body">
+        <form action="datos.html">
+          <div class="form-group">
+              <!--/////En el siguiente input se utiliza un evento de teclado ONKEYPRESS/////-->
+            <label for="exampleInputOrigen" class="font-weight-bold">Origen</label>
+            <input type="text" class="form-control" id="exampleInputOrigen" onkeypress="return TeclasPermitidas(event)" aria-describedby="emailHelp" placeholder="Introduzca un Origen..." required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputDestino" class="font-weight-bold">Destino</label>
+            <select class="form-control"  id="exampleInputDestino" required>
+              <option>Eliga un destino</option>
+              <option>Praga</option>
+              <option>Japón</option>
+              <option>Ecuador</option>
+              <option>Rusia</option>
+              <option>Bora Bora</option>
+              <option>Canadá</option>
+              <option>Francia</option>
+              <option>Bélgica</option>
+              <option>Holanda</option>
+              <option>China</option>
+              <option>New York</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFIda" class="font-weight-bold">Fecha de Ida</label>
+            <input type="date" class="form-control" id="exampleInputFIda" aria-describedby="dateHelp" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFVuelta" class="font-weight-bold">Fecha de Vuelta</label>
+            <input type="date" class="form-control" id="exampleInputFVuelta" aria-describedby="dateHelp" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect1" class="font-weight-bold">Eliga Tarifa</label>
+            <select class="form-control" id="exampleSelect1" required>
+              <option selected>Standard</option>
+              <option>Flexi-Plus</option>
+              <option>Premium</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect2" class="font-weight-bold">Tipo de Viaje</label>
+            <select class="form-control" id="exampleSelect2" required>
+              <option selected>Ida/Vuelta</option>
+              <option>Ida</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect2" class="font-weight-bold">Número de Pasajeros</label>
+            <select multiple class="form-control" id="exampleSelect2" required>
+              <option selected>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-check mb-2">
+            <label class="form-check-label" class="font-weight-bold">
+              <input type="checkbox" class="form-check-input">
+              Deseo recibir promociones y ofertas
+            </label>
+            <br/>
+            <label class="form-check-label" class="font-weight-bold">
+              <input type="checkbox" class="form-check-input" required>
+              Acepto los términos de privacidad
+            </label>
+          </div>
+          <div class="text-center">
+          <input type="submit" value="Reservar" class="btn btn-success"/>
+        </div>
+        </form>
+        <br/>
+        <div class="text-center">
+          <a class="d-block small" href="index.html">Volver a Inicio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /////Bootstrap JavaScript///// -->
+  <script src="CSS/Plantilla/vendor/jquery/jquery.min.js"></script>
+  <script src="CSS/Plantilla/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- /////Plugin JavaScript///// -->
+  <script src="CSS/Plantilla/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>

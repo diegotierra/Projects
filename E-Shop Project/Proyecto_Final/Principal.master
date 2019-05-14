@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Principal.master.cs" Inherits="Principal" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OdysseyD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="Templates/main_template/assets/css/main.css" />
+        <!-- Bootstrap core CSS -->
+        <link href="Templates/Inicio/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Templates/Inicio/css/shop-homepage.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+            <form method="post" action="#" runat="server">
+			<!-- Header -->
+				<div id="header">
+					<!-- Nav -->
+						<nav id="nav">
+                            <h1><a href="Default.aspx" id="logo">OdysseyD</a></h1>
+                            <ul>
+							<li><a href="Default.aspx">Home</a></li>
+								<li>
+									<a href="#">Categories</a>
+									<ul>
+                                        <asp:Label ID="lblCategorias" runat="server" Text=""></asp:Label>
+									</ul>
+								</li>
+								<li>
+                                    <a href="#"><i class="fas fa-user"></i></a>
+                                    <ul>
+                                        <asp:ContentPlaceHolder ID="infouser" runat="server"></asp:ContentPlaceHolder>                                      
+									</ul>
+								</li>
+								<li><a href="CarroCompra.aspx"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li>
+                                    <asp:ContentPlaceHolder ID="nombrerol" runat="server"></asp:ContentPlaceHolder>
+                                </li>
+                                <li>
+                                    <asp:ContentPlaceHolder ID="signout" runat="server"></asp:ContentPlaceHolder>
+                                </li>
+                                </ul>
+						</nav>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+                    <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>					
+					<div class="container">
+                        <asp:ContentPlaceHolder ID="contenido" runat="server"></asp:ContentPlaceHolder>	
+                     </div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">						
+                                <section class="5u 12u(mobile)">
+											<h3>Do you need help? Contact us</h3>
+                                            <p>We are at your disposal to answer and solve all your questions</p>									                                        
+									    <div>
+										    <label for="name" class="newStyle1">Name</label>
+										    <input type="text" name="name" id="name" />
+									    </div>
+									    <div>
+										    <label for="email" class="newStyle2">Email</label>
+										    <input type="email" name="email" id="email" />
+									    </div>
+									    <div>
+										    <label for="message" class="newStyle3">Message</label>
+										    <textarea name="message" id="message" rows="4"></textarea>
+									    </div>
+                                        <br/>
+									    <div class="actions" style="text-align:center">
+										    <input type="submit" value="Send" class="special" />
+										    <input type="reset" value="Reset" />
+									    </div>
+								        </form>
+                                </section>
+                                <section class="3u 12u(mobile)">
+                                </section>
+                                <section class="4u 12u(mobile)">
+							        <h2>Where are we?</h2>
+							        <dl class="alt">
+								        <dt>Address</dt>
+								        <dd>23 Maisonnave Ave &bull; Alicante,03003 &bull; Spain</dd>
+								        <dt>Phone</dt>
+								        <dd>(+34) 000 00 00 00</dd>
+								        <dt>Email</dt>
+								        <dd><a href="#">odysseydinfo@gmail.com</a></dd>
+							        </dl>
+                                    <div id="map"></div>
+                                    <script>
+                                      function initMap() {
+                                        var uluru = {lat: 38.343578, lng: -0.491513};
+                                        var map = new google.maps.Map(document.getElementById('map'), {
+                                          zoom: 15,
+                                          center: uluru
+                                        });
+                                        var marker = new google.maps.Marker({
+                                          position: uluru,
+                                          map: map
+                                        });
+                                      }
+                                    </script>
+                                    <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG3NZuLaXny-wKpXutr5Vshr26nSh7T34&callback=initMap">
+                                   </script>
+						       </section>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="12u">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>You can follow us in the following social networks</h3>
+										</header>										
+										<ul class="icons">
+											<li><a href="https://twitter.com/" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="https://es-la.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="https://www.pinterest.es/" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+											<li><a href="https://dribbble.com/" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+											<li><a href="https://www.linkedin.com" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+										</ul>
+									</section>
+
+								<!-- Copyright -->
+									<div class="copyright">
+										<ul class="menu">
+											<li>&copy; OdysseyD 2018. All rights reserved.</li><li>Designed by Diego Tierra Díaz</li>
+										</ul>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="Templates/main_template/assets/js/jquery.min.js"></script>
+			<script src="Templates/main_template/assets/js/jquery.dropotron.min.js"></script>
+			<script src="Templates/main_template/assets/js/jquery.scrolly.min.js"></script>
+			<script src="Templates/main_template/assets/js/jquery.onvisible.min.js"></script>
+			<script src="Templates/main_template/assets/js/skel.min.js"></script>
+			<script src="Templates/main_template/assets/js/util.js"></script>
+			<script src="Templates/main_template/assets/js/main.js"></script>
+            <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script src="Templates/Inicio/vendor/jquery/jquery.min.js"></script>
+            <script src="Templates/Inicio/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>	
+    </body>
+</html>

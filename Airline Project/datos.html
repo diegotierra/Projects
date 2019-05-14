@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Earthland Airways</title>
+  <script type="text/javascript" src="JS/javascript.js"></script>
+
+  <!-- /////Bootstrap CSS///// -->
+  <link href="CSS/Plantilla/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- /////Fuentes///// -->
+  <link href="CSS/Plantilla/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- /////Estilo de la Plantilla///// -->
+  <link href="CSS/Plantilla/css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <form action="carga.html">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header text-center"><h5>Datos de la compra</h5></div>
+      <div class="card-body">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName">Nombre</label>
+                  <!--/////En el siguiente input se utiliza un evento de teclado ONKEYPRESS/////-->
+                <input class="form-control" id="idnombre" type="text" aria-describedby="nameHelp" onkeypress="return TeclasPermitidas(event)" placeholder="Introduce nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastName">Apellido</label>
+                  <!--/////En el siguiente input se utiliza un evento de teclado ONKEYPRESS/////-->
+                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" onkeypress="return TeclasPermitidas(event)" placeholder="Introduce apellido" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input class="form-control" id="idemail" type="email" aria-describedby="emailHelp" placeholder="Introduce email" required>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="idNumtarj">Número de tarjeta</label>
+                  <!--/////En el siguiente input se utiliza un evento de teclado ONKEYPRESS/////-->
+                <input class="form-control" id="idNumtarj" type="text" onkeypress="return TeclasPermitidas2(event)" placeholder="Introduce Núm de tarjeta" required>
+              </div>
+              <div class="col-md-6">
+                <label for="idFCad">Fecha de Caducidad</label>
+                <input class="form-control" id="idFCad" type="month" placeholder="Fecha Caducidad..." required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="idCod">Código de Seguridad</label>
+              <!--/////En el siguiente input se utiliza un evento de teclado ONKEYPRESS/////-->
+            <input class="form-control" id="idCod" type="text" onkeypress="return TeclasPermitidas2(event)" placeholder="Introduce Cód Seguridad" required>
+          </div>
+          <div class="text-center">
+          <input type="submit" value="Confirmar Reserva" class="btn btn-success"/>
+        </div>
+        <br/>
+        <div class="text-center">
+          <a class="d-block small" href="index.html">Volver a Inicio</a>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  <!-- /////Bootstrap JavaScript///// -->
+  <script src="CSS/Plantilla/vendor/jquery/jquery.min.js"></script>
+  <script src="CSS/Plantilla/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- /////Plugin JavaScript///// -->
+  <script src="CSS/Plantilla/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>
